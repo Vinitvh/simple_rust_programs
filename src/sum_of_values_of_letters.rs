@@ -1,19 +1,12 @@
 use std::collections::HashMap;
 
 pub fn sum_of_values() {
-  let _letters:HashMap<&str, u32>= HashMap::from([
-    ("a", 1),
-    ("b", 2),
-    ("c", 3),
-    ("d", 4),
-    ("e", 5)
-  ]);
+  let string = "excellent";
 
-  let string = "abcd".split("");
-
-  // let mut sum: u32 = 0;
-  // println!("{}", sum);
-  for s in string {
-    println!("{}", s);
-  }
+  let letters:HashMap<char, usize>= ('a'..='z').enumerate()
+      .map(|tuple| (tuple.1, tuple.0 + 1)).collect();
+  
+  let sum: usize = string.to_lowercase().chars()
+                .map(|ch| letters.get(&ch).unwrap_or(&0usize)).sum();
+  println!("{}", sum);
 }
