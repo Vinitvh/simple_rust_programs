@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
 pub fn sum_of_values() {
-  let letters:HashMap<&str, u32>= HashMap::from([
+  let _letters:HashMap<&str, u32>= HashMap::from([
     ("a", 1),
     ("b", 2),
     ("c", 3),
@@ -9,9 +9,11 @@ pub fn sum_of_values() {
     ("e", 5)
   ]);
 
-  let mut sum: u32 = 0;
-  for val in letters.values() {
-    sum = sum + val;
+  let string = "abcd".split("");
+
+  // let mut sum: u32 = 0;
+  // println!("{}", sum);
+  for s in string {
+    println!("{}", s);
   }
-  println!("{}", sum);
 }
