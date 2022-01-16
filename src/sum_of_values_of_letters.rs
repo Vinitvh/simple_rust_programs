@@ -9,7 +9,9 @@ pub fn sum_of_values() {
     ("e", 5)
   ]);
 
-  for (letter, _val) in letters {
-    print!("{}", letter);
+  let mut sum: u32 = 0;
+  for val in letters.values() {
+    sum = sum + val;
   }
+  println!("{}", sum);
 }
