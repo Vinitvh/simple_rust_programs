@@ -1,7 +1,7 @@
 pub fn nonogram_row() {
-  let arr: [u32; 5] = [1,1,1,1,1];
+  let arr: [usize; 6] = [1,1,1,1,1,0];
+  let _len = arr.len();
 
-  for val in arr {
-    println!("{}", val);
-  }
+  let pos = arr.iter().position(|&x| x == 0);
+  println!("{:?}", pos);
 }
